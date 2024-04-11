@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay loop muted style="width: 100%; height: auto">
+      <source src="./ELVIS.webm" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <script>
+      document.querySelector("video").playbackRate = 0.9;
+    </script>
+  </body>
+</html>
