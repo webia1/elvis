@@ -14,13 +14,19 @@
     </style>
   </head>
   <body>
-    <video autoplay loop muted style="width: 100%; height: auto">
-      <source src="./ELVIS.webm" type="video/webm" />
-      <source src="./ELVIS.mp4" type="video/mp4" />
+    <video id="myVideo" autoplay loop muted style="width: 100%; height: auto">
       Your browser does not support the video tag.
     </video>
     <script>
-      document.querySelector("video").playbackRate = 0.9;
+      var video = document.getElementById("myVideo");
+
+      if (video.canPlayType("video/webm")) {
+        video.src = "./ELVIS.webm";
+      } else if (video.canPlayType("video/mp4")) {
+        video.src = "./ELVIS.mp4";
+      }
+
+      video.playbackRate = 0.9;
     </script>
   </body>
 </html>
